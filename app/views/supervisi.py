@@ -213,13 +213,13 @@ df_final = pd.concat([df_out, summary_rows], ignore_index=True)
 
 # format angka pakai koma ribuan
 # pastikan dulu dua kolom angka jadi numeric
-df_final["Indeks (Rupiah)"] = pd.to_numeric(df_final["Indeks (Rupiah)"], errors="coerce")
+# df_final["Indeks (Rupiah)"] = pd.to_numeric(df_final["Indeks (Rupiah)"], errors="coerce")
 df_final["Biaya (Rupiah)"]  = pd.to_numeric(df_final["Biaya (Rupiah)"], errors="coerce")
 
 # lalu format dengan ribuan pakai koma
-df_final["Indeks (Rupiah)"] = df_final["Indeks (Rupiah)"].apply(
-    lambda x: "{:,.0f}".format(x) if pd.notnull(x) else ""
-)
+# df_final["Indeks (Rupiah)"] = df_final["Indeks (Rupiah)"].apply(
+#     lambda x: "{:,.0f}".format(x) if pd.notnull(x) else ""
+# )
 df_final["Biaya (Rupiah)"] = df_final["Biaya (Rupiah)"].apply(
     lambda x: "{:,.0f}".format(x) if pd.notnull(x) else ""
 )
