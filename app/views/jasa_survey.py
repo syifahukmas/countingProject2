@@ -265,12 +265,12 @@ df_out = pd.DataFrame(data, columns=[
 ])
 
 
-jumlah_harian = jumlah_total_biaya_survey_lokasi / jh_keseluruhan
+# jumlah_harian = jumlah_total_biaya_survey_lokasi / jh_keseluruhan
 
 # buat baris ringkasan
 summary_rows = pd.DataFrame([
     ["Jumlah", "", "", "", "", f"Total biaya {jh_keseluruhan} hari", jumlah_total_biaya_survey_lokasi],
-    ["", "", "", "", "", "Tarif Harian", jumlah_harian]
+    ["", "", "", "", ""]
 ], columns=df_out.columns)
 
 # gabungkan tabel utama dengan ringkasan
