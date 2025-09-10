@@ -80,7 +80,7 @@ provinsi = st.selectbox(
 # === Pilih Jenis Pesawat ===
 jenis_pesawat = st.selectbox(
     "Pilih Jenis Pesawat",
-    ["", "Pesawat TNI", "Sewa Pesawat Swasta"]  # "" supaya default kosong
+    ["", "Pesawat TNI (Kebencanaan/Strategis Kenegaraan)", "Sewa Pesawat Swasta"]  # "" supaya default kosong
 )
 
 # === Munculkan input sesuai pilihan pesawat ===
@@ -100,7 +100,7 @@ if jenis_pesawat == "Sewa Pesawat Swasta":
         min_value=40, step=1, value=40
     )
 
-elif jenis_pesawat == "Pesawat TNI":
+elif jenis_pesawat == "Pesawat TNI (Kebencanaan/Strategis Kenegaraan)":
     # Input Jumlah Personel OMC
     jumlah_personel_keseluruhan = st.number_input(
         "Jumlah Personel OMC (minimal 40)",
@@ -181,7 +181,7 @@ uh_koordinasi_awal = hitung_uang_harian(uang_harian_luar_kota, jh_uh_koordinasi_
 uh_instalasi_posko = hitung_uang_harian(uang_harian_luar_kota, jh_uh_instalasi_posko, jumlah_personel_instalasi_posko)
 uh_tim_pelaksana = hitung_uang_harian(uang_harian_luar_kota, jh_uh_tim_pelaksana, jumlah_personel_tim_pelaksana)
 
-if jenis_pesawat == "Pesawat TNI":
+if jenis_pesawat == "Pesawat TNI (Kebencanaan/Strategis Kenegaraan)":
     uh_kru_pesawat = hitung_uang_harian(uang_harian_luar_kota, jh_uh_kru_pesawat, jumlah_kru_pesawat_TNI)
 else:
     uh_kru_pesawat = 0
@@ -219,7 +219,7 @@ harga_penginapan_khusus = df[df['PROVINSI'] == 'Jawa Barat']['HOTELIV'].values[0
 biaya_penginapan_koordinasi_awal = biaya_penginapan(harga_penginapan_ktg4, jh_penginapan_koordinasi_awal, jumlah_personel_koordinasi_awal)
 biaya_penginapan_instalasi_posko = biaya_penginapan(harga_penginapan_ktg4, jh_penginapan_instalasi_posko, jumlah_personel_instalasi_posko)
 biaya_penginapan_tim_pelaksana = biaya_penginapan(harga_penginapan_ktg4, jh_penginapan_tim_pelaksana, jumlah_personel_tim_pelaksana)
-if jenis_pesawat == "Pesawat TNI":
+if jenis_pesawat == "Pesawat TNI (Kebencanaan/Strategis Kenegaraan)
     biaya_penginapan_kru_pesawat = biaya_penginapan(
         harga_penginapan_ktg4, jh_penginapan_kru_pesawat, jumlah_kru_pesawat_TNI
     )
@@ -263,7 +263,7 @@ harga_taksi_flat = 2 * df[df['PROVINSI'] == 'DKI Jakarta']['BANDARA'].values[0]
 biaya_taksi_koordinasi_awal = biaya_taksi(jumlah_personel_koordinasi_awal, harga_taksi_flat)
 biaya_taksi_instalasi_posko = biaya_taksi(jumlah_personel_instalasi_posko, harga_taksi_flat)
 biaya_taksi_tim_pelaksana = biaya_taksi(jumlah_personel_tim_pelaksana, harga_taksi_flat)
-if jenis_pesawat == "Pesawat TNI":
+if jenis_pesawat == "Pesawat TNI (Kebencanaan/Strategis Kenegaraan)":
     biaya_taksi_kru_pesawat = biaya_taksi(jumlah_kru_pesawat_TNI, harga_taksi_flat)
 else:
     biaya_taksi_kru_pesawat = 0
@@ -290,7 +290,7 @@ biaya_penggantian_avtur_pesawat = penggantian_avtur_pesawat(jumlah_liter, harga_
 
 # # =========== Selama Operasi ============ #
 mode = jenis_operasi
-if jenis_pesawat == "Pesawat TNI":
+if jenis_pesawat == "Pesawat TNI (Kebencanaan/Strategis Kenegaraan)":
     jam_terbang_operasi, biaya_alutsista_pesawat_selama_operasi = alutsista_pesawat_selama_operasi(
         mode=="Kondisi Normal (Operasi 12 Jam)", jh_keseluruhan, jumlah_liter, harga_avtur_per_liter)
 else:
@@ -440,7 +440,7 @@ data += [
     ["1. Bahan Semai", jumlah_kg, "Kg", jh_keseluruhan, "hari", harga_per_kg, biaya_harga_bahan_semai_NaCl],
 ]
 
-if jenis_pesawat == "Pesawat TNI":
+if jenis_pesawat == "Pesawat TNI (Kebencanaan/Strategis Kenegaraan)":
     data += [
         ["2. Alutsista Pesawat TNI", "", "", "", "", "", ""],
         ["a. Penggantian Avtur untuk Mob - Demob", jam_mobdemob, "jam", jumlah_liter, "liter", harga_avtur_per_liter, biaya_penggantian_avtur_pesawat],
