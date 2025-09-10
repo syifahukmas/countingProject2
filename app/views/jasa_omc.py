@@ -388,7 +388,7 @@ data = [
 ]
 
 # tambahkan Kru Pesawat TNI hanya jika pilihannya "Pesawat TNI"
-if jenis_pesawat == "Pesawat TNI":
+if jenis_pesawat == "Pesawat TNI (Kebencanaan/Strategis Kenegaraan)":
     data += [
         ["2.2. Kru Pesawat TNI", "", "", "", "", "", ""],
         ["Uang Harian", jumlah_kru_pesawat_TNI, "orang", jh_uh_kru_pesawat, "hari", uang_harian_luar_kota, uh_kru_pesawat],
