@@ -185,7 +185,7 @@ data = [
 
     ["B. Sarana dan Prasarana", "", "", "", "", "", ""],
     ["a. Data dan Informasi Cuaca ", jumlah_paket, "paket", jumlah_kali_paket, "kali", data_informasi_cuaca, data_informasi_cuaca],
-    ["b. Sewa Kendaraan", jumlah_unit_kendaraan_keseluruhan, "unit", jh_keseluruhan, "hari", sewa_kendaraan,  biaya_sewa_kendaraan_selama_operasi],
+    ["b. Sewa Kendaraan", jumlah_unit_kendaraan_keseluruhan, "unit", jumlah_input_hari, "hari", sewa_kendaraan,  biaya_sewa_kendaraan_selama_operasi],
    
     ["C. Hasil Akhir Supervisi Operasi Modifikasi Cuaca", "", "", "", "", "", ""],
     ["Laporan Supervisi Pelaksanaan Operasi Modifikasi Cuaca", jumlah_paket, "paket", jumlah_kali_paket, "kali", harga_pencetakan_dan_penggandaan_laporan, biaya_pencetakan_dan_penggandaan_laporan],
