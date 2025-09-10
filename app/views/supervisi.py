@@ -204,7 +204,7 @@ jumlah_harian = jumlah_total_biaya_omc / jumlah_input_hari
 
 # buat baris ringkasan
 summary_rows = pd.DataFrame([
-    ["Jumlah", "", "", "", "", f"Total biaya {jh_input_hari} hari", jumlah_total_biaya_omc],
+    ["Jumlah", "", "", "", "", f"Total biaya {jumlah_input_hari} hari", jumlah_total_biaya_omc],
     ["", "", "", "", "", "Tarif Harian", jumlah_harian]
 ], columns=df_out.columns)
 
