@@ -219,7 +219,7 @@ harga_penginapan_khusus = df[df['PROVINSI'] == 'Jawa Barat']['HOTELIV'].values[0
 biaya_penginapan_koordinasi_awal = biaya_penginapan(harga_penginapan_ktg4, jh_penginapan_koordinasi_awal, jumlah_personel_koordinasi_awal)
 biaya_penginapan_instalasi_posko = biaya_penginapan(harga_penginapan_ktg4, jh_penginapan_instalasi_posko, jumlah_personel_instalasi_posko)
 biaya_penginapan_tim_pelaksana = biaya_penginapan(harga_penginapan_ktg4, jh_penginapan_tim_pelaksana, jumlah_personel_tim_pelaksana)
-if jenis_pesawat == "Pesawat TNI (Kebencanaan/Strategis Kenegaraan)"
+if jenis_pesawat == "Pesawat TNI (Kebencanaan/Strategis Kenegaraan)":
     biaya_penginapan_kru_pesawat = biaya_penginapan(
         harga_penginapan_ktg4, jh_penginapan_kru_pesawat, jumlah_kru_pesawat_TNI
     )
